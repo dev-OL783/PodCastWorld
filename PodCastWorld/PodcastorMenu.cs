@@ -125,21 +125,6 @@ namespace PodCastWorld
             Console.WriteLine($"Total Listens: {totalListens}");
         }
 
-        // private static void CreateEpisode(Podcaster podcaster)
-        // {
-        //     Console.WriteLine("Create episode not yet implemented.");
-        // }
-
-        // private static void ViewEpisodes(Podcaster podcaster)
-        // {
-        //     Console.WriteLine("View episodes not yet implemented.");
-        // }
-
-        // private static void ViewStatistics(Podcaster podcaster)
-        // {
-        //     Console.WriteLine("Statistics not yet implemented.");
-        // }
-
         private static void ViewFeedback(Podcaster podcaster)
         {
             Console.WriteLine("Feedback not yet implemented.");

@@ -14,33 +14,26 @@ public class RegularListener : User
 }
 
 
-
 public class PremiumListener : User
 {
+    public int PaymentId { get; private set; }
+    public DateTime RegistrationDate { get; private set; }
+
     public PremiumListener(
         string name,
         int age,
         string email,
         string mobileNumber,
-        string password)
+        string password,
+        int paymentId,
+        DateTime registrationDate)
         : base(name, age, email, mobileNumber, password)
     {
+        PaymentId = paymentId;
+        RegistrationDate = registrationDate;
     }
 }
 
-
-// public class Podcaster : User
-// {
-//     public Podcaster(
-//         string name,
-//         int age,
-//         string email,
-//         string mobileNumber,
-//         string password)
-//         : base(name, age, email, mobileNumber, password)
-//     {
-//     }
-// }
 
 public class Podcaster : User
 {
@@ -56,3 +49,16 @@ public class Podcaster : User
     {
     }
 }
+
+// public class PremiumListener : User
+// {
+//     public PremiumListener(
+//         string name,
+//         int age,
+//         string email,
+//         string mobileNumber,
+//         string password)
+//         : base(name, age, email, mobileNumber, password)
+//     {
+//     }
+// }

@@ -30,11 +30,18 @@
 
                 switch (choice)
                 {
+                    // case "1":
+                    //     currentUser = UserManager.UserLogin(userRepository);
+                    //     break;
                     case "1":
-                        // UserAuthenticator.cs
-                        // UserLogin();
-                        currentUser = UserManager.UserLogin(userRepository);
-                        break;
+                    currentUser = UserManager.UserLogin(userRepository);
+
+                    if (currentUser != null)
+                    {
+                        MenuRouter.ShowMenu(currentUser);
+                    }
+                    break;
+
 
                     case "2":
                         // Jump directly into the registration flow

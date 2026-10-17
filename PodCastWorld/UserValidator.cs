@@ -99,4 +99,65 @@ public static class UserValidator
         Console.WriteLine("Password must contain uppercase, lowercase and a number.");
         
     }
+
+    // premium
+
+    public static bool IsValidPaymentId(string input, out int paymentId)
+    {
+        if (int.TryParse(input, out paymentId))
+        {
+            return paymentId >= 100000 && paymentId <= 999999;
+        }
+
+        return false;
+    }
+
+    public static bool IsValidRegistrationDate(
+        string input,
+        out DateTime registrationDate)
+    {
+        return DateTime.TryParseExact(
+            input,
+            "dd/MM/yyyy",
+            null,
+            System.Globalization.DateTimeStyles.None,
+            out registrationDate);
+    }
+
+    public static void PrintPaymentIdError()
+    {
+        Console.WriteLine(
+            "Payment ID must be a 6-digit number between 100000 and 999999.");
+    }
+
+    public static void PrintRegistrationDateError()
+    {
+        Console.WriteLine(
+            "Date must be entered in dd/MM/yyyy format.");
+    }
+
+
+
+    // public static bool IsValidPaymentId(string paymentId)
+    // {
+    //     return !string.IsNullOrWhiteSpace(paymentId) && paymentId.Length >= 5;
+    // }
+    
+    // public static bool IsValidRegistrationDate(string input, out DateTime registrationDate)
+    // {
+    //     return DateTime.TryParse(input, out registrationDate)
+    //         && registrationDate <= DateTime.Now;
+    // }
+
+    // public static void PrintPaymentIdError()
+    // {
+    //     Console.WriteLine("Payment ID cannot be empty.");
+    // }
+
+    // public static void PrintRegistrationDateError()
+    // {
+    //     Console.WriteLine("Registration date must be a valid past date.");
+    // }
+
+    
 }
